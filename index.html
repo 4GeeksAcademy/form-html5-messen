@@ -13,87 +13,112 @@
 </head>
 
 <body>
-    <div class="container col-md-12 mt-4">
-        <form class="row g-3 border border-1 rounded">
-            <div class="col-md-12 bg-secondary-subtle border-bottom mt-0">
-                <h1>Payment form example</h1>
-            </div>
-            <div class="alert alert-danger" role="alert">
-                Some fields are missing
-            </div>
+    <form class="container border rounded mt-4">
+        <div class="row bg-secondary-subtle border-bottom p-2">
+            <h1>Payment form example</h1>
+        </div>
+
+        <div class="row m-3 alert alert-danger" role="alert">
+            Some fields are missing
+        </div>
+
+        <div class="row">
             <div class="col-md-5">
-                <label for="inputPassword4" class="form-label"><strong>Card #</strong></label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="XXXXXXXXXXXXXX">
+                <label for="inputCard" class="form-label"><strong>Card #</strong></label>
+                <input type="text" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXX">
             </div>
             <div class="col-md-3">
-                <label for="inputPassword4" class="form-label"><strong>CVC #</strong></label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="0000">
+                <label for="inputCVC" class="form-label"><strong>CVC #</strong></label>
+                <input type="text" class="form-control" id="inputCVC" placeholder="0000">
             </div>
             <div class="col-md-4">
-                <label for="inputPassword4" class="form-label"><strong>Amount</strong></label>
-                <i class="fa-solid fa-dollar-sign"></i><input type="password" class="form-control" id="inputPassword4"
-                    placeholder="Amount">
+                <label for="inputPassword" class="form-label"><strong>Amount</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Amount">
+                </div>
             </div>
-            <div class="col-md-6">
-                <label for="inputAddress" class="form-label">
-                    <h6>First Name</h6>
-                </label>
-                <input type="text" class="form-control" id="inputAddress">
-            </div>
-            <div class="col-md-6">
-                <label for="inputAddress" class="form-label">
-                    <h6>Last Name</h6>
-                </label>
-                <input type="text" class="form-control" id="inputAddress">
-            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-md-6">
+                <label for="inputName" class="form-label">
+                    First Name
+                </label>
+                <input type="text" class="form-control" id="inputName">
+            </div>
+            <div class="col-md-6">
+                <label for="inputLastName" class="form-label">
+                    Last Name
+                </label>
+                <input type="text" class="form-control" id="inputLastName">
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-6">
                 <label for="inputCity" class="form-label">
-                    <h6>City</h6>
+                    City
                 </label>
                 <input type="text" class="form-control" id="inputCity">
             </div>
             <div class="col-md-4">
                 <label for="inputState" class="form-label">
-                    <h6>State</h6>
+                    State
                 </label>
                 <select id="inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+                    <option selected>Choose your state</option>
+                    <option>Alicante</option>
+                    <option>Madrid</option>
+                    <option>Malaga</option>
+                    <option>Asturias</option>
                 </select>
             </div>
             <div class="col-md-2">
                 <label for="inputZip" class="form-label">
-                    <h6>Zip</h6>
+                    Zip
                 </label>
                 <input type="text" class="form-control" id="inputZip">
             </div>
-            
-            <div class="col-md-3 bg-secondary-subtle ms-1 rounded">
-                <h6>We accept</h6>
-                <input type="radio" name="visa" value="visa">
-                <label for="visa"><i class="fa-brands fa-cc-visa"></i></label>
-                <input type="radio" name="visa" value="visa">
-                <label for="visa"><i class="fa-solid fa-credit-card"></i></label>
-                <input type="radio" name="visa" value="visa">
-                <label for="visa"><i class="fa-brands fa-cc-mastercard"></i></label>
-                <input type="radio" name="visa" value="visa">
-                <label for="visa"><i class="fa-brands fa-cc-amex"></i></label>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                        style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Comments</label>
+        </div>
+
+        <div class="row mt-3 justify-content-between">
+            <div class="col-auto justify-content-between"> 
+                <label>We Accept</label>
+                <div class="bg-secondary text-light p-2 rounded">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="paymentMethod">
+                        <label class="form-check-label" for="paymentMethod"><i class="fa-brands fa-cc-mastercard"></i></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="paymentMethod">
+                        <label class="form-check-label" for="paymentMethod"><i class="fa-brands fa-cc-visa"></i></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                       <input type="radio" name="paymentMethod">
+                        <label class="form-check-label" for="paymentMethod"><i class="fa-brands fa-cc-diners-club"></i></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                       <input type="radio" name="paymentMethod">
+                        <label class="form-check-label" for="paymentMethod"><i class="fa-brands fa-cc-amex"></i></label>
+                    </div>
                 </div>
             </div>
-            
-            <div class="col-12 bg-secondary-subtle d-flex justify-content-end py-3">
-                <button type="submit" class="btn btn-primary mx-2">Buy Now</button>
-                <button type="submit" class="btn btn-secondary">Cancel</button>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <div class="form-text">Add any notes here</div>
+                    </div>
             </div>
-        </form>
-    </div>
+        </div>
+
+       <footer class="row bg-light border-top mt-3 justify-content-end p-2">
+            <button type="button" class="btn btn-secondary col-auto px-2">Cancel</button>
+            <button type="submit" class="btn btn-primary col-auto px-2 ms-2">Send</button>
+        </footer>
+    </form>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
