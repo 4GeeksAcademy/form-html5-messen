@@ -25,17 +25,17 @@
         <div class="row">
             <div class="col-md-5">
                 <label for="inputCard" class="form-label"><strong>Card #</strong></label>
-                <input type="text" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXX">
+                <input type="text" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXX" required>
             </div>
             <div class="col-md-3">
                 <label for="inputCVC" class="form-label"><strong>CVC #</strong></label>
-                <input type="text" class="form-control" id="inputCVC" placeholder="0000">
+                <input type="text" class="form-control" id="inputCVC" placeholder="0000" required>
             </div>
             <div class="col-md-4">
                 <label for="inputPassword" class="form-label"><strong>Amount</strong></label>
                 <div class="input-group">
                     <span class="input-group-text">$</span>
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Amount">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Amount" required>
                 </div>
             </div>
         </div>
@@ -56,50 +56,58 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">
-                    City
-                </label>
-                <input type="text" class="form-control" id="inputCity">
+        <div class="col-md-6">
+            <label for="validationServer03" class="form-label">City</label>
+            <input type="text" class="form-control is-invalid" id="validationServer03"
+                aria-describedby="validationServer03Feedback" required>
+            <div id="validationServer03Feedback" class="invalid-feedback">
+                Please provide a valid city.
             </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">
-                    State
-                </label>
-                <select id="inputState" class="form-select">
-                    <option selected>Choose your state</option>
-                    <option>Alicante</option>
-                    <option>Madrid</option>
-                    <option>Malaga</option>
-                    <option>Asturias</option>
-                </select>
+        </div>
+        <div class="col-md-3">
+            <label for="validationServer04" class="form-label">State</label>
+            <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback"
+                required>
+                <option selected disabled value="">Choose your state</option>
+                <option>Alicante</option>
+                <option>Madrid</option>
+                <option>Malaga</option>
+                <option>Asturias</option>
+            </select>
+            <div id="validationServer04Feedback" class="invalid-feedback">
+                Please select a valid state.
             </div>
-            <div class="col-md-2">
-                <label for="inputZip" class="form-label">
-                    Zip
-                </label>
-                <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-md-3">
+            <label for="validationServer05" class="form-label">Zip</label>
+            <input type="text" class="form-control is-invalid" id="validationServer05"
+                aria-describedby="validationServer05Feedback" required>
+            <div id="validationServer05Feedback" class="invalid-feedback">
+                Please provide a valid zip.
             </div>
+        </div>
         </div>
 
         <div class="row mt-3 justify-content-between">
-            <div class="col-auto justify-content-between"> 
+            <div class="col-auto justify-content-between">
                 <label>We Accept</label>
                 <div class="bg-secondary text-light p-2 rounded">
                     <div class="form-check form-check-inline">
                         <input type="radio" name="paymentMethod">
-                        <label class="form-check-label" for="paymentMethod"><i class="fa-brands fa-cc-mastercard"></i></label>
+                        <label class="form-check-label" for="paymentMethod"><i
+                                class="fa-brands fa-cc-mastercard"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input type="radio" name="paymentMethod">
                         <label class="form-check-label" for="paymentMethod"><i class="fa-brands fa-cc-visa"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
-                       <input type="radio" name="paymentMethod">
-                        <label class="form-check-label" for="paymentMethod"><i class="fa-brands fa-cc-diners-club"></i></label>
+                        <input type="radio" name="paymentMethod">
+                        <label class="form-check-label" for="paymentMethod"><i
+                                class="fa-brands fa-cc-diners-club"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
-                       <input type="radio" name="paymentMethod">
+                        <input type="radio" name="paymentMethod">
                         <label class="form-check-label" for="paymentMethod"><i class="fa-brands fa-cc-amex"></i></label>
                     </div>
                 </div>
@@ -109,11 +117,11 @@
                     <label for="message">Message</label>
                     <textarea class="form-control" id="message" rows="3"></textarea>
                     <div class="form-text">Add any notes here</div>
-                    </div>
+                </div>
             </div>
         </div>
 
-       <footer class="row bg-light border-top mt-3 justify-content-end p-2">
+        <footer class="row bg-light border-top mt-3 justify-content-end p-2">
             <button type="button" class="btn btn-secondary col-auto px-2">Cancel</button>
             <button type="submit" class="btn btn-primary col-auto px-2 ms-2">Send</button>
         </footer>
@@ -127,5 +135,4 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
